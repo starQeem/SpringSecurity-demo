@@ -1,0 +1,19 @@
+server:
+  port: 8080
+#数据库配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost/security?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-circular-references: true
+mybatis-plus:
+  type-aliases-package: com.starQeem.springSecurity.pojo
+logging:
+  level:
+    com:
+      starQeem:
+        springSecurity: debug  #开启日志
